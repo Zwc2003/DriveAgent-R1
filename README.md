@@ -1,6 +1,6 @@
 # DriveAgent-R1: Advancing VLM-based Autonomous Driving with Active Perception and Hybrid Thinking
 
-**[<a href="[https://arxiv.org/abs/your-arxiv-id](https://arxiv.org/abs/2507.20879)" target="_blank">arXiv Paper</a>]**
+**[<a href="https://arxiv.org/abs/2507.20879" target="_blank">arXiv Paper</a>]**
 
 ---
 
