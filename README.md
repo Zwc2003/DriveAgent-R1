@@ -31,7 +31,7 @@ In complex scenarios, `DriveAgent-R1` proactively uses tools like **RoI Inspecti
   <img src="https://github.com/Zwc2003/DriveAgent-R1/tree/main/figs/arc.png" width="100%">
 </p>
 <p align="center">
-  <em>For simple cases, it uses text-based reasoning. [cite_start]For complex cases, it interleaves thoughts with tool calls to acquire new visual evidence. [cite: 53, 54, 55]</em>
+  <em>For simple cases, it uses text-based reasoning. For complex cases, it interleaves thoughts with tool calls to acquire new visual evidence.</em>
 </p>
 
 
