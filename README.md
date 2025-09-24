@@ -1,7 +1,5 @@
 # DriveAgent-R1: Advancing VLM-based Autonomous Driving with Active Perception and Hybrid Thinking
 
-**[<a href="https://arxiv.org/abs/2507.20879" target="_blank">arXiv Paper</a>]**
-
 ---
 
 This is the official repository for **DriveAgent-R1**. We introduce an autonomous driving agent that pioneers **active perception** and a **hybrid-thinking framework** for high-level behavioral planning.
