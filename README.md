@@ -17,7 +17,7 @@ Our 3B parameter model achieves performance competitive with top-tier systems li
 In complex scenarios, `DriveAgent-R1` proactively uses tools like **RoI Inspection** to clarify uncertainty. This grounds its decisions in verifiable visual evidence, enhancing reliability and interpretability.
 
 <p align="center">
-  <img src="https://github.com/Zwc2003/DriveAgent-R1/tree/main/figs/example.png" width="100%">
+  <img src="./figs/example.png" width="100%">
 </p>
 <p align="center">
   <em>The agent actively inspects a confusing scene to discover a minor collision, leading to a safe plan to stop.</em>
@@ -28,7 +28,7 @@ In complex scenarios, `DriveAgent-R1` proactively uses tools like **RoI Inspecti
 `DriveAgent-R1` dynamically adapts its reasoning mode based on scene complexity, balancing computational efficiency with robust, in-depth analysis.
 
 <p align="center">
-  <img src="https://github.com/Zwc2003/DriveAgent-R1/tree/main/figs/arc.png" width="100%">
+  <img src="./figs/arc.png" width="100%">
 </p>
 <p align="center">
   <em>For simple cases, it uses text-based reasoning. For complex cases, it interleaves thoughts with tool calls to acquire new visual evidence.</em>
