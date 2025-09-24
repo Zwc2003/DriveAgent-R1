@@ -34,7 +34,7 @@ In complex scenarios, `DriveAgent-R1` proactively uses tools like **RoI Inspecti
   <em>For simple cases, it uses text-based reasoning. For complex cases, it interleaves thoughts with tool calls to acquire new visual evidence.</em>
 </p>
 
-## Showcase: Reasoning in Action
+## Showcase:
 
 Here are some qualitative examples illustrating `DriveAgent-R1`'s capabilities in diverse driving scenarios.
 
