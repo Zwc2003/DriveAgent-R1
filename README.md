@@ -20,7 +20,7 @@ In complex scenarios, `DriveAgent-R1` proactively uses tools like **RoI Inspecti
   <img src="https://github.com/Zwc2003/DriveAgent-R1/tree/main/figs/example.png" width="80%">
 </p>
 <p align="center">
-  [cite_start]<em>The agent actively inspects a confusing scene to discover a minor collision, leading to a safe plan to stop. [cite: 30]</em>
+  <em>The agent actively inspects a confusing scene to discover a minor collision, leading to a safe plan to stop.</em>
 </p>
 
 **2. Hybrid-Thinking Framework**
