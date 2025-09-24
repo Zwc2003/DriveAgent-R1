@@ -99,11 +99,9 @@ In complex or uncertain environments, `DriveAgent-R1` proactively invokes its Vi
 
 To support reproducibility and further research in the community, we are committed to releasing the following assets after the peer-review process:
 
--   ✅ **Test Data Splits**: The complete test splits for both **Drive-Internal<sub>test</sub>** and **nuScenes<sub>test</sub>** will be made public.
--   ✅ **Meta-Action Labels**: The generated meta-action labels for both test sets.
--   ✅ **Evaluation Scripts**: The full evaluation scripts to allow for fair and consistent benchmarking against our results.
+-   [ ] **Test Data Splits**: The complete test splits for both **Drive-Internal<sub>test</sub>** and **nuScenes<sub>test</sub>** will be made public.
+-   [ ] **Meta-Action Labels**: The generated meta-action labels for both test sets.
+-   [ ] **Evaluation Scripts**: The full evaluation scripts to allow for fair and consistent benchmarking against our results.
 
 Due to enterprise confidentiality requirements, we are unable to release our training code and the full Drive-Internal training dataset.
 
----
-*Note: Please create a `figs` folder in your repository and upload the `example.png` and `arc.png` images for the README to display them correctly. You will also need to update the placeholder links for the Project Page and arXiv paper.*
