@@ -8,7 +8,7 @@ At its core, `DriveAgent-R1` is designed to mimic human-like cognitive patterns.
 
 Our 3B parameter model achieves performance competitive with top-tier systems like GPT-5 and human drivers, while remaining efficient and deployment-friendly.
 
-### Core Concepts
+## Core Concepts
 
 **1. Active Perception for Grounded Reasoning**
 
@@ -31,6 +31,21 @@ In complex scenarios, `DriveAgent-R1` proactively uses tools like **RoI Inspecti
 <p align="center">
   <em>For simple cases, it uses text-based reasoning. For complex cases, it interleaves thoughts with tool calls to acquire new visual evidence.</em>
 </p>
+
+## Upcoming Releases
+
+To support full reproducibility and empower future research in the community, we are committed to releasing the following assets upon the completion of the peer-review process:
+
+-   [ ] **Code**
+    -   [ ] **Training Code**: The complete source code for all training stages, including Supervised Fine-Tuning (SFT) and Cascaded Reinforcement Learning (Cascaded RL).
+    -   [ ] **Evaluation Scripts**: The full scripts to reproduce the benchmark results reported in our paper.
+
+-   [ ] **Datasets**
+    -   [ ] **Drive-Internal Dataset**: The complete dataset, including training and test splits with all corresponding meta-action labels.
+    -   [ ] **nuScenes Test Set**: Our specific test split and the generated meta-action labels.
+
+-   [ ] **Models**
+    -   [ ] **Trained Model Weights**: Model checkpoint of `DriveAgent-R1` to allow for direct inference and replication of our results.
 
 ## Showcase:
 
@@ -91,15 +106,4 @@ In complex or uncertain environments, `DriveAgent-R1` proactively invokes its Vi
 <p align="center">
   <em>Even on a seemingly clear road, the agent exhibits proactive caution by investigating distant pedestrians whose proximity to the road is uncertain[cite: 439]. It deploys <strong>RoI Inspection</strong> to get a magnified view, revealing that the individuals are very close to the lane of travel. This insight elevates the potential risk, prompting a prudent decision to decelerate.</em>
 </p>
-
-
-### Upcoming Releases
-
-To support reproducibility and further research in the community, we are committed to releasing the following assets after the peer-review process:
-
--   [ ] **Test Data Splits**: The complete test splits for both **Drive-Internal<sub>test</sub>** and **nuScenes<sub>test</sub>** will be made public.
--   [ ] **Meta-Action Labels**: The generated meta-action labels for both test sets.
--   [ ] **Evaluation Scripts**: The full evaluation scripts to allow for fair and consistent benchmarking against our results.
-
-Due to enterprise confidentiality requirements, we are unable to release our training code and the full Drive-Internal training dataset.
 
