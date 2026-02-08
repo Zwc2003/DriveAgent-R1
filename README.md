@@ -45,7 +45,7 @@ We have released the **Training Code** for DriveAgent-R1, including the complete
 
 ### Upcoming Releases
 
-To support full reproducibility and empower future research in the community, we are committed to releasing the following assets:
+We are committed to releasing the following assets:
 
 -   [ ] **Evaluation Scripts**: The full scripts to reproduce the benchmark results reported in our paper.
 
@@ -63,7 +63,7 @@ This project integrates [DetAny3D](https://github.com/opendrivelab/DetAny3D) for
 ### Prerequisites
 
 - Python 3.12
-- CUDA 12.0+ 
+- CUDA 11.8+ 
 - Ubuntu
 
 ### Step 1: Install DetAny3D
