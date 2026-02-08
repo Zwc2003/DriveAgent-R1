@@ -1,5 +1,9 @@
 # DriveAgent-R1: Advancing VLM-based Autonomous Driving with Active Perception and Hybrid Thinking
 
+[![ICLR 2026](https://img.shields.io/badge/ICLR-2026-blue)](https://iclr.cc/)
+
+**Accepted to ICLR 2026**
+
 ---
 
 This is the official repository for **DriveAgent-R1**. We introduce an autonomous driving agent that pioneers **active perception** and a **hybrid-thinking framework** for high-level behavioral planning.
@@ -32,13 +36,18 @@ In complex scenarios, `DriveAgent-R1` proactively uses tools like **RoI Inspecti
   <em>For simple cases, it uses text-based reasoning. For complex cases, it interleaves thoughts with tool calls to acquire new visual evidence.</em>
 </p>
 
-## Upcoming Releases
+## Releases
 
-To support full reproducibility and empower future research in the community, we are committed to releasing the following assets upon the completion of the peer-review process:
+We have released the **Training Code** for DriveAgent-R1, including the complete source code for all training stages with multi-round tool calling framework.
 
--   [ ] **Code**
-    -   [ ] **Training Code**: The complete source code for all training stages, including Supervised Fine-Tuning (SFT) and Cascaded Reinforcement Learning (Cascaded RL).
-    -   [ ] **Evaluation Scripts**: The full scripts to reproduce the benchmark results reported in our paper.
+### Released
+-   [x] **Training Code**: The complete source code for all training stages, including Supervised Fine-Tuning (SFT) and Cascaded Reinforcement Learning (Cascaded RL). See [Installation](#installation) and [Project Structure](#project-structure) for details.
+
+### Upcoming Releases
+
+To support full reproducibility and empower future research in the community, we are committed to releasing the following assets:
+
+-   [ ] **Evaluation Scripts**: The full scripts to reproduce the benchmark results reported in our paper.
 
 -   [ ] **Datasets**
     -   [ ] **Drive-Internal Dataset**: The complete dataset, including training and test splits with all corresponding meta-action labels.
@@ -46,6 +55,57 @@ To support full reproducibility and empower future research in the community, we
 
 -   [ ] **Models**
     -   [ ] **Trained Model Weights**: Model checkpoint of `DriveAgent-R1` to allow for direct inference and replication of our results.
+
+## Installation
+
+This project integrates [DetAny3D](https://github.com/opendrivelab/DetAny3D) for 3D object detection and [Depth-Anything-V2](https://github.com/DepthAnything/Depth-Anything-V2) for depth estimation. Please follow the installation instructions below.
+
+### Prerequisites
+
+- Python 3.12
+- CUDA 12.0+ 
+- Ubuntu
+
+### Step 1: Install DetAny3D
+
+Follow the official [DetAny3D](https://github.com/opendrivelab/DetAny3D) installation instructions to set up the environment. Download the required checkpoints and place them in the `DetAny3D/checkpoints/` directory.
+
+**Important**: Before training or inference, you need to start the 3D detection server in a separate terminal:
+
+```bash
+cd DetAny3D
+bash start_server.sh
+```
+
+### Step 2: Install Depth-Anything-V2
+
+Follow the official [Depth-Anything-V2](https://github.com/DepthAnything/Depth-Anything-V2) installation instructions to set up the environment. Download the model weight `depth_anything_v2_vitl.pth` and place it in the `tool-rl/Depth-Anything-V2/checkpoints/` directory.
+
+**Note**: The weight file used in this project is `depth_anything_v2_vitl.pth` (Depth-Anything-V2-Large model).
+
+You can download the checkpoint from:
+- [Hugging Face](https://huggingface.co/depth-anything/Depth-Anything-V2-Large/resolve/main/depth_anything_v2_vitl.pth)
+
+### Step 3: Install DriveAgent-R1
+
+```bash
+cd tool-rl
+pip install -e .
+```
+
+This will install the training framework and all necessary dependencies.
+
+## Project Structure
+
+The key components of the training codebase are organized as follows:
+
+- **Tool Library**: `tool-rl/src/r1-v/src/open_r1/tools`
+  - Contains all vision tools including 3D object detection, depth estimation, RoI inspection, etc.
+
+- **Training Scripts**: `tool-rl/src/scripts`
+
+- **Multi-round Tool Calling Training Framework**: `tool-rl/src/r1-v/src/open_r1/trainer/vllm_grpo_trainer_modified.py`
+  - The core training framework that supports multi-round tool calling with GRPO (Group Relative Policy Optimization)
 
 ## Showcase:
 
@@ -107,3 +167,26 @@ In complex or uncertain environments, `DriveAgent-R1` proactively invokes its Vi
   <em>Even on a seemingly clear road, the agent exhibits proactive caution by investigating distant pedestrians whose proximity to the road is uncertain[cite: 439]. It deploys <strong>RoI Inspection</strong> to get a magnified view, revealing that the individuals are very close to the lane of travel. This insight elevates the potential risk, prompting a prudent decision to decelerate.</em>
 </p>
 
+## Citation
+
+If you find this work useful, please consider citing:
+
+```bibtex
+@inproceedings{driveagentr1,
+  title={DriveAgent-R1: Advancing VLM-based Autonomous Driving with Active Perception and Hybrid Thinking},
+  author={Weicheng Zheng, Xiaofei Mao, Nanfei Ye, Pengxiang Li, Kun Zhan, XianPeng Lang, Hang Zhao},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2026}
+}
+```
+
+## Acknowledgements
+
+This project is built upon [R1-V](https://github.com/Deep-Agent/R1-V), a powerful framework for reinforcement learning in vision-language models. We sincerely thank the following open-source projects and communities:
+
+- **[R1-V](https://github.com/Deep-Agent/R1-V)**: The foundation framework for our training infrastructure
+- **[DetAny3D](https://github.com/opendrivelab/DetAny3D)**: 3D object detection capabilities
+- **[Depth-Anything-V2](https://github.com/DepthAnything/Depth-Anything-V2)**: Depth estimation model
+- **[Qwen-VL](https://github.com/QwenLM/Qwen2.5-VL)**: Vision-language model backbone
+
+We are grateful for their excellent work and contributions to the open-source community.

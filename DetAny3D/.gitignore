@@ -1,0 +1,59 @@
+.nfs*
+
+# compilation and distribution
+__pycache__
+_ext
+*.pyc
+*.pyd
+*.so
+*.dll
+*.egg-info/
+build/
+dist/
+wheels/
+
+# pytorch/python/numpy formats
+*.ply
+*.sh
+*.pth
+*.pbdata
+*.pkl
+*.npy
+*.ts
+model_ts*.txt
+*.png
+*.jpg
+*.mp4
+*.json
+# onnx models
+*.onnx
+# ipython/jupyter notebooks
+**/.ipynb_checkpoints/
+
+# dirs
+detectany3D/
+detectany3D_eval1025/
+data/
+exps/
+eval_baselines/val_monogrnet/
+__pycache__/
+segment_anything/__pycache__/
+visbug/
+DepthAnythingV2/metric_depth
+DepthAnythingV2/assets
+DepthAnythingV2/checkpoints
+# Editor temporaries
+*.swn
+*.swo
+*.swp
+*~
+
+# editor settings
+.idea
+.vscode
+_darcs
+
+# demo 
+**/node_modules
+yarn.lock
+package-lock.json

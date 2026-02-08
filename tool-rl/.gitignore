@@ -1,0 +1,12 @@
+output/
+hostfiles/
+internal_scripts/*.whl
+*.whl
+# Large files
+*.whl
+*rollout_log*.txt
+wandb/
+*.pth
+*.weights
+*.ckpt
+*.bin
