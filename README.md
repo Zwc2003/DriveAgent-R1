@@ -49,11 +49,11 @@ We are committed to releasing the following assets:
 
 -   [ ] **Evaluation Scripts**: The full scripts to reproduce the benchmark results reported in our paper.
 
--   [ ] **Datasets**
+-   [ ] **Datasets** *(pending company approval)*
     -   [ ] **Drive-Internal Dataset**: The complete dataset, including training and test splits with all corresponding meta-action labels.
     -   [ ] **nuScenes Test Set**: Our specific test split and the generated meta-action labels.
 
--   [ ] **Models**
+-   [ ] **Models** *(pending company approval)*
     -   [ ] **Trained Model Weights**: Model checkpoint of `DriveAgent-R1` to allow for direct inference and replication of our results.
 
 ## Installation
